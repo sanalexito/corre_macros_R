@@ -1,16 +1,18 @@
+#Pone el superíndice en la primera columna.
+
 library(RDCOMClient)
 #############3
-dir = "D:/Varios/correr_macro_R/correr_macro_R/libros/"
+dir = "~/libros/"
 setwd(dir)
 #################################LEER ARCHIVOS EN EL DIRECTORIO
 a = list.files(dir)
 #############################################################
 xlApp <- COMCreate("Excel.Application")
 #####################################
-xlWbk <- xlApp$Workbooks()$Open(paste0(dir,a[grep("COPIA",a)]))#Corresponde al libro de estimaciones##
+xlWbk <- xlApp$Workbooks()$Open(paste0(dir,a[grep("MARCADOR pa Buscar en a",a)]))#Corresponde a un libro en la lista a##
 xlApp[['Visible']] <- FALSE
 ###################################
-xlWbk <- xlApp$Workbooks()$Open("D:/Varios/correr_macro_R/correr_macro_R/macros_R/superindice_asp.xlsm")
+xlWbk <- xlApp$Workbooks()$Open("~/superindice_asp.xlsm")
 xlApp[['Visible']] <- FALSE
 ##CORRER LA MACRO################
 xlApp$Run("superindice")
