@@ -1,2 +1,2 @@
 # corre_macros_R
-Algunas macros que se ejecutan desde R con diversos fines como comparar o pintar de acuerdo a cierto criterio.
+Aquí se alojan algunas macros de Excel que se ejecutan desde R con diversos fines: como comparar o pintar una tabla de acuerdo a cierto criterio. 
